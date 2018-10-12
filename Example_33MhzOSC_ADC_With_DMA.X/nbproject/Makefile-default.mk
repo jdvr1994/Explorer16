@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=adc.c buttons.c lcd.c lcd_printf.c leds.c rtcc.c my_adc.c my_osc.c main.c timer_10ms.c
+SOURCEFILES_QUOTED_IF_SPACED=adc.c buttons.c lcd.c lcd_printf.c leds.c rtcc.c my_adc.c my_osc.c main.c timer_10us.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc.o ${OBJECTDIR}/buttons.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/lcd_printf.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/my_adc.o ${OBJECTDIR}/my_osc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/timer_10ms.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/adc.o.d ${OBJECTDIR}/buttons.o.d ${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/lcd_printf.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/my_adc.o.d ${OBJECTDIR}/my_osc.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/timer_10ms.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc.o ${OBJECTDIR}/buttons.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/lcd_printf.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/my_adc.o ${OBJECTDIR}/my_osc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/timer_10us.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/adc.o.d ${OBJECTDIR}/buttons.o.d ${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/lcd_printf.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/my_adc.o.d ${OBJECTDIR}/my_osc.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/timer_10us.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/adc.o ${OBJECTDIR}/buttons.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/lcd_printf.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/my_adc.o ${OBJECTDIR}/my_osc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/timer_10ms.o
+OBJECTFILES=${OBJECTDIR}/adc.o ${OBJECTDIR}/buttons.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/lcd_printf.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/my_adc.o ${OBJECTDIR}/my_osc.o ${OBJECTDIR}/main.o ${OBJECTDIR}/timer_10us.o
 
 # Source Files
-SOURCEFILES=adc.c buttons.c lcd.c lcd_printf.c leds.c rtcc.c my_adc.c my_osc.c main.c timer_10ms.c
+SOURCEFILES=adc.c buttons.c lcd.c lcd_printf.c leds.c rtcc.c my_adc.c my_osc.c main.c timer_10us.c
 
 
 CFLAGS=
@@ -157,12 +157,12 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/timer_10ms.o: timer_10ms.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/timer_10us.o: timer_10us.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/timer_10ms.o.d 
-	@${RM} ${OBJECTDIR}/timer_10ms.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  timer_10ms.c  -o ${OBJECTDIR}/timer_10ms.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/timer_10ms.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/timer_10ms.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/timer_10us.o.d 
+	@${RM} ${OBJECTDIR}/timer_10us.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  timer_10us.c  -o ${OBJECTDIR}/timer_10us.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/timer_10us.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/timer_10us.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/adc.o: adc.c  nbproject/Makefile-${CND_CONF}.mk
@@ -228,12 +228,12 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/timer_10ms.o: timer_10ms.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/timer_10us.o: timer_10us.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/timer_10ms.o.d 
-	@${RM} ${OBJECTDIR}/timer_10ms.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  timer_10ms.c  -o ${OBJECTDIR}/timer_10ms.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/timer_10ms.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/timer_10ms.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/timer_10us.o.d 
+	@${RM} ${OBJECTDIR}/timer_10us.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  timer_10us.c  -o ${OBJECTDIR}/timer_10us.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/timer_10us.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/timer_10us.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

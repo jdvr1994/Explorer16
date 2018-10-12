@@ -31,7 +31,7 @@
         <itemPath>lcd_printf.c</itemPath>
         <itemPath>leds.c</itemPath>
         <itemPath>rtcc.c</itemPath>
-        <itemPath>timer_10ms.c</itemPath>
+        <itemPath>timer_10us.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="misLibrerias" projectFiles="true">
         <itemPath>my_adc.c</itemPath>

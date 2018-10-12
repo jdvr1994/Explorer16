@@ -25,7 +25,7 @@ Command:
   build/default/production/my_adc.o \
   build/default/production/my_osc.o \
   build/default/production/main.o \
-  build/default/production/timer_10ms.o \
+  build/default/production/timer_10us.o \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33FJ256GP710A.gld.00 \
   --stack=16 \
@@ -60,7 +60,7 @@ c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.
 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
                               (__crt_start_mode_normal)
 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
-                              build/default/production/timer_10ms.o (_memset)
+                              build/default/production/timer_10us.o (_memset)
 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(printf_cdnopuxX.XXeo)
                               build/default/production/main.o (__printf_cdnopuxX)
 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
@@ -143,7 +143,7 @@ section                    address      alignment gaps    total length  (dec)
 .bss                         0x930                   0             0xe  (14)
 .data                        0x93e                   0             0x2  (2)
 .bss                         0x940                   0             0x2  (2)
-_04EFDA805bbffbce           0x7ffc                   0             0x4  (4)
+_0570DA805bbfff9f           0x7ffc                   0             0x4  (4)
 
                  Total "data" memory used (bytes):          0x146  (326) 1%
 
@@ -372,7 +372,7 @@ LOAD build/default/production/rtcc.o
 LOAD build/default/production/my_adc.o
 LOAD build/default/production/my_osc.o
 LOAD build/default/production/main.o
-LOAD build/default/production/timer_10ms.o
+LOAD build/default/production/timer_10us.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33FJ256GP710A
 LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libfx-elf.a
@@ -419,7 +419,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libfx-elf.a
  *(.isr*)
  .isr.text        0x0002dc         0x14 build/default/production/main.o
                   0x0002dc                  __DMA0Interrupt
- .isr.text        0x0002f0         0x9c build/default/production/timer_10ms.o
+ .isr.text        0x0002f0         0x9c build/default/production/timer_10us.o
                   0x0002f0                  __T3Interrupt
  .isr             0x00038c          0x4 default_isr
                   0x00038c                  __DefaultInterrupt
@@ -583,7 +583,7 @@ __FUID3
  .debug_info      0x002378       0x1475 build/default/production/my_adc.o
  .debug_info      0x0037ed        0x3c8 build/default/production/my_osc.o
  .debug_info      0x003bb5        0x4d5 build/default/production/main.o
- .debug_info      0x00408a        0x89e build/default/production/timer_10ms.o
+ .debug_info      0x00408a        0x89e build/default/production/timer_10us.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x9f7
@@ -597,7 +597,7 @@ __FUID3
  .debug_abbrev    0x00052a        0x167 build/default/production/my_adc.o
  .debug_abbrev    0x000691         0xd6 build/default/production/my_osc.o
  .debug_abbrev    0x000767        0x120 build/default/production/main.o
- .debug_abbrev    0x000887        0x170 build/default/production/timer_10ms.o
+ .debug_abbrev    0x000887        0x170 build/default/production/timer_10us.o
 
 .debug_line       0x000000        0xbbf
  *(.debug_line)
@@ -610,7 +610,7 @@ __FUID3
  .debug_line      0x0006e0        0x16b build/default/production/my_adc.o
  .debug_line      0x00084b         0xfd build/default/production/my_osc.o
  .debug_line      0x000948        0x12b build/default/production/main.o
- .debug_line      0x000a73        0x14c build/default/production/timer_10ms.o
+ .debug_line      0x000a73        0x14c build/default/production/timer_10us.o
 
 .debug_frame      0x000000        0x652
  *(.debug_frame)
@@ -623,7 +623,7 @@ __FUID3
  .debug_frame     0x0003f8        0x110 build/default/production/my_adc.o
  .debug_frame     0x000508         0x30 build/default/production/my_osc.o
  .debug_frame     0x000538         0x6e build/default/production/main.o
- .debug_frame     0x0005a6         0xac build/default/production/timer_10ms.o
+ .debug_frame     0x0005a6         0xac build/default/production/timer_10us.o
 
 .debug_str        0x000000        0x178
  *(.debug_str)
@@ -635,7 +635,7 @@ __FUID3
  .debug_str       0x000091         0x8c build/default/production/my_adc.o
  .debug_str       0x00011d         0x1d build/default/production/my_osc.o
  .debug_str       0x00013a         0x1c build/default/production/main.o
- .debug_str       0x000156         0x22 build/default/production/timer_10ms.o
+ .debug_str       0x000156         0x22 build/default/production/timer_10us.o
 
 .debug_loc
  *(.debug_loc)
@@ -665,7 +665,7 @@ __FUID3
  .debug_pubnames
                   0x000325         0x3c build/default/production/main.o
  .debug_pubnames
-                  0x000361         0x69 build/default/production/timer_10ms.o
+                  0x000361         0x69 build/default/production/timer_10us.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -691,7 +691,7 @@ __FUID3
  .debug_aranges
                   0x0000c8         0x18 build/default/production/main.o
  .debug_aranges
-                  0x0000e0         0x18 build/default/production/timer_10ms.o
+                  0x0000e0         0x18 build/default/production/timer_10us.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1950,7 +1950,7 @@ LOAD data_init
  .debug_pubtypes
                   0x000557         0x3c build/default/production/main.o
  .debug_pubtypes
-                  0x000593         0xca build/default/production/timer_10ms.o
+                  0x000593         0xca build/default/production/timer_10us.o
 
 __c30_signature
                   0x00065d         0xf0
@@ -1973,7 +1973,7 @@ __c30_signature
  __c30_signature
                   0x00068d          0x6 build/default/production/main.o
  __c30_signature
-                  0x000693          0x6 build/default/production/timer_10ms.o
+                  0x000693          0x6 build/default/production/timer_10us.o
  __c30_signature
                   0x000699          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
@@ -2035,16 +2035,16 @@ __c30_signature
  __c30_signature
                   0x000747          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
 
-_04EFDA805bbffbce
+_0570DA805bbfff9f
                     0x7ffc          0x4
- _04EFDA805bbffbce
+ _0570DA805bbfff9f
                     0x7ffc          0x4 build/default/production/main.o
                     0x7ffc                  _BufferADC
 
 .nbss               0x0800          0x8
  .nbss              0x0800          0x4 build/default/production/lcd.o
  .nbss              0x0804          0x2 build/default/production/rtcc.o
- .nbss              0x0806          0x2 build/default/production/timer_10ms.o
+ .nbss              0x0806          0x2 build/default/production/timer_10us.o
 
 .data               0x0808         0x88
  .data              0x0808         0x88 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xfiles.XX_eo)
@@ -2054,7 +2054,7 @@ _04EFDA805bbffbce
                     0x0880                  __Files
 
 .bss                0x0890         0x64
- .bss               0x0890         0x64 build/default/production/timer_10ms.o
+ .bss               0x0890         0x64 build/default/production/timer_10us.o
 
 .data               0x08f4         0x3c
  .data              0x08f4         0x22 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
@@ -2082,7 +2082,7 @@ _04EFDA805bbffbce
 .ivt._T3Interrupt
                   0x000024          0x2
  .ivt._T3Interrupt
-                  0x000024          0x2 build/default/production/timer_10ms.o
+                  0x000024          0x2 build/default/production/timer_10us.o
 
 .const              0x91f8         0x20 load address 0x0011f8  
  .const             0x91f8         0x14 build/default/production/main.o
@@ -2118,7 +2118,7 @@ _04EFDA805bbffbce
                   0x001db0                  _ADC2_selectChannel
                   0x001dca                  _readADC1_Manual
                   0x001dea                  _readADC2_Manual
- .text            0x001e0a         0xe4 build/default/production/timer_10ms.o
+ .text            0x001e0a         0xe4 build/default/production/timer_10us.o
                   0x001e0a                  _TIMER_CancelTick
                   0x001e40                  _TIMER_RequestTick
                   0x001ea8                  _TIMER_SetConfiguration

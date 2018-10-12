@@ -9,8 +9,8 @@
         <itemPath>lcd.h</itemPath>
         <itemPath>leds.h</itemPath>
         <itemPath>rtcc.h</itemPath>
-        <itemPath>timer_1ms.h</itemPath>
         <itemPath>adc.h</itemPath>
+        <itemPath>timer_10us.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="misLibrerias" projectFiles="true">
         <itemPath>my_adc.h</itemPath>
@@ -31,7 +31,7 @@
         <itemPath>lcd_printf.c</itemPath>
         <itemPath>leds.c</itemPath>
         <itemPath>rtcc.c</itemPath>
-        <itemPath>timer_1ms.c</itemPath>
+        <itemPath>timer_10ms.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="misLibrerias" projectFiles="true">
         <itemPath>my_adc.c</itemPath>
@@ -45,6 +45,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
